@@ -26,6 +26,7 @@ caption {
 
 body {
   background-image: url("../images/pigeon-background.JPEG");
+  background-repeat: no-repeat;
   background-color: #dddddd;
   color: #000000;
   font-family: "Andika", sans-serif;
@@ -40,8 +41,6 @@ h1 {
   font-size: 32px;
   text-align: center;
   line-height: 2;
-
-  
 }
 
 p {
@@ -65,9 +64,6 @@ td {
   color: #ffffff;
 }
 
-.rowhead {
-}
-
 table {
   border: 5px solid #000000;
   margin-left: auto;
@@ -77,6 +73,9 @@ table {
 tr:hover td,
 tr:hover th {
   background-color: rgba(126, 37, 8, 0.25);
+}
+thead tr:first-child:hover {
+  background-color: #7e0825;
 }
 
 /* I gave you the selector, but not the property-value pair. 
@@ -101,7 +100,7 @@ tbody:last-child tr:last-child td:last-child {
   border-bottom-right-radius: 50px;
 }
 
-th,
+:not(.colhead) th,
 td {
   text-align: center;
   border-top: solid 2px black;
@@ -116,6 +115,7 @@ td {
   vertical-align: middle;
   text-transform: uppercase;
   background: #7e0825;
+  border-bottom: solid 5px black;
 }
 
 tbody tr:nth-of-type(odd) {
@@ -133,4 +133,5 @@ footer {
   color: #ffffff;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
